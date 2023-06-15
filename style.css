@@ -732,6 +732,57 @@
   padding: 12px 68px;
 }
 
+@media (max-width: 1023px) {
+  .products__list {
+    row-gap: 25px;
+  }
+
+  .products__item {
+    box-sizing: border-box;
+    flex-basis: 100%;
+    padding: 16px 88px 16px 16px;
+    background-repeat: no-repeat;
+  }
+
+  .products__item::after {
+    width: 80px;
+    height: 80px;
+    border: 1px solid #9deee1;
+    border-radius: 16px;
+    right: 15px;
+    bottom: 2px;
+  }
+
+  .products__item--bitcoin {
+    padding-right: 114px;
+  }
+
+  .products__subtitle {
+    margin-bottom: 12px;
+  }
+
+  .products__desc-list {
+    row-gap: 12px;
+    margin-bottom: 24px;
+  }
+
+  .products__desc-item {
+    padding-left: 16px;
+  }
+
+  .products__desc-item::before {
+    width: 5px;
+    height: 5px;
+    border-radius: 14px;
+    top: 2px;
+    left: 0;
+  }
+
+  .products__button {
+    padding: 12px 32px;
+  }
+}
+
 /* options */
 
 .options__wrapper {
