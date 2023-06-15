@@ -1,11 +1,9 @@
-@import "normalize.css";
-
 /* fonts */
 
 @font-face {
   font-family: "General Sans";
-  src: url("fonts/GeneralSans-Medium.woff2") format("woff2"),
-    url("fonts/GeneralSans-Medium.woff") format("woff");
+  src: url("./fonts/GeneralSans-Medium.woff2") format("woff2"),
+    url("./fonts/GeneralSans-Medium.woff") format("woff");
   font-style: normal;
   font-weight: 500;
   font-display: swap;
@@ -13,8 +11,8 @@
 
 @font-face {
   font-family: "General Sans";
-  src: url("fonts/GeneralSans-Semibold.woff2") format("woff2"),
-    url("fonts/GeneralSans-Semibold.woff") format("woff");
+  src: url("./fonts/GeneralSans-Semibold.woff2") format("woff2"),
+    url("./fonts/GeneralSans-Semibold.woff") format("woff");
   font-style: normal;
   font-weight: 600;
   font-display: swap;
@@ -22,8 +20,8 @@
 
 @font-face {
   font-family: "General Sans";
-  src: url("fonts/GeneralSans-Bold.woff2") format("woff2"),
-    url("fonts/GeneralSans-Bold.woff") format("woff");
+  src: url("./fonts/GeneralSans-Bold.woff2") format("woff2"),
+    url("./fonts/GeneralSans-Bold.woff") format("woff");
   font-style: normal;
   font-weight: 700;
   font-display: swap;
@@ -43,6 +41,10 @@
 }
 
 /* body */
+
+.no-scroll {
+  overflow: hidden;
+}
 
 .body {
   font-family: "General Sans";
@@ -255,16 +257,16 @@
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    position: absolute;
-    top: 100%;
+    position: fixed;
+    top: -100vh;
     left: 0;
+    right: 0;
     z-index: 2;
-    width: 390px;
+    width: 100%;
+    min-height: 100vh;
     padding: 0 20px;
     box-sizing: border-box;
-    visibility: hidden;
-    transform: translateY(-150%);
-    transition: visibility 0.4s, transform 0.4s cubic-bezier(0, 0.76, 0.74, 0.92);
+    transition: 0.3s linear;
   }
 
   .nav__btn {
@@ -407,18 +409,18 @@
 }
 
 .social__link--fb {
-  mask-image: url("img/icon/facebook.svg");
-  -webkit-mask-image: url("img/icon/facebook.svg");
+  mask-image: url("./img/icon/facebook.svg");
+  -webkit-mask-image: url("./img/icon/facebook.svg");
 }
 
 .social__link--ig {
-  mask-image: url("img/icon/instagram.svg");
-  -webkit-mask-image: url("img/icon/instagram.svg");
+  mask-image: url("./img/icon/instagram.svg");
+  -webkit-mask-image: url("./img/icon/instagram.svg");
 }
 
 .social__link--twi {
-  mask-image: url("img/icon/twitter.svg");
-  -webkit-mask-image: url("img/icon/twitter.svg");
+  mask-image: url("./img/icon/twitter.svg");
+  -webkit-mask-image: url("./img/icon/twitter.svg");
 }
 
 .social__link--dark {
@@ -485,8 +487,6 @@
 
   .nav--active .nav__menu-wrapper {
     top: 0;
-    visibility: visible;
-    transform: none;
   }
 }
 
@@ -558,7 +558,7 @@
   right: 0;
   width: 218px;
   height: 191px;
-  background-image: url("img/brand-icon/crypto-knight.svg");
+  background-image: url("./img/brand-icon/crypto-knight.svg");
 }
 
 .intro__title {
@@ -648,7 +648,7 @@
     top: -119px;
     width: 125px;
     height: 110px;
-    background-image: url("img/brand-icon/crypto-knight.svg");
+    background-image: url("./img/brand-icon/crypto-knight.svg");
     background-size: 125px 110px;
   }
 
@@ -738,20 +738,20 @@
 }
 
 .products__item--ethereum {
-  background-image: url("/img/decor/bg-products--ethereum.svg");
+  background-image: url("./img/decor/bg-products--ethereum.svg");
 }
 
 .products__item--ethereum::after {
-  background-image: url("/img/icon/ethereum.svg");
+  background-image: url("./img/icon/ethereum.svg");
 }
 
 .products__item--bitcoin {
-  background-image: url("/img/decor/bg-products--btc.svg");
+  background-image: url("./img/decor/bg-products--btc.svg");
   padding-right: 205px;
 }
 
 .products__item--bitcoin::after {
-  background-image: url("/img/icon/bitcoin.svg");
+  background-image: url("./img/icon/bitcoin.svg");
 }
 
 .products__subtitle {
@@ -810,7 +810,7 @@
     padding: 16px 88px 16px 16px;
     box-sizing: border-box;
     background-repeat: no-repeat;
-    background-image: url("/img/decor/bg-products-mob.svg");
+    background-image: url("./img/decor/bg-products-mob.svg");
     background-size: 350px 232px;
   }
 
@@ -872,6 +872,7 @@
   url("img/decor/bg-starting.svg");
   background-position: bottom -34px left -340px, top -262px right -245px;;
   background-repeat: no-repeat;
+  background-image: url("./img/decor/bg-started-desk.svg");
 }
 
 .starting__title {
@@ -889,7 +890,7 @@
   flex-basis: calc(33% - 25px);
   padding: 73px 105px 92px 65px;
   box-sizing: border-box;
-  background-image: url("/img/decor/bg-content-started-desk.svg");
+  background-image: url("./img/decor/bg-content-started-desk.svg");
   background-repeat: no-repeat;
 }
 
@@ -919,7 +920,7 @@
   right: 41px;
   width: 115px;
   height: 130px;
-  background-image: url("/img/brand-icon/crying-knight.svg");
+  background-image: url("./img/brand-icon/crying-knight.svg");
   background-repeat: no-repeat;
 }
 
@@ -934,7 +935,7 @@
   right: 37px;
   width: 95px;
   height: 122px;
-  background-image: url("/img/brand-icon/fire-knight.svg");
+  background-image: url("./img/brand-icon/fire-knight.svg");
   background-repeat: no-repeat;
 }
 
@@ -949,7 +950,7 @@
   right: 25px;
   width: 121px;
   height: 99px;
-  background-image: url("/img/brand-icon/coin-knight.svg");
+  background-image: url("./img/brand-icon/coin-knight.svg");
   background-repeat: no-repeat;
 }
 
@@ -998,13 +999,13 @@
   .starting__item {
     padding: 20px 16px 25px 110px;
     flex-basis: 100%;
-    background-image: url("/img/decor/bg-content-started-mob.svg");
+    background-image: url("./img/decor/bg-content-started-mob.svg");
   }
 
   .starting__item--sign-up {
     padding-bottom: 20px;
     padding-right: 33px;
-    background-image: url("/img/decor/bg-content-started--signup.svg");
+    background-image: url("./img/decor/bg-content-started--signup.svg");
   }
 
   .starting__break {
@@ -1018,7 +1019,7 @@
     left: -4px;
     width: 84px;
     height: 95px;
-    background-image: url("/img/brand-icon/crying-knight.svg");
+    background-image: url("./img/brand-icon/crying-knight.svg");
     background-size: contain;
   }
 
@@ -1029,7 +1030,7 @@
     left: 11px;
     width: 73px;
     height: 93px;
-    background-image: url("/img/brand-icon/fire-knight.svg");
+    background-image: url("./img/brand-icon/fire-knight.svg");
     background-repeat: no-repeat;
     background-size: contain;
   }
@@ -1048,7 +1049,7 @@
     left: -4px;
     width: 89px;
     height: 72px;
-    background-image: url("/img/brand-icon/coin-knight.svg");
+    background-image: url("./img/brand-icon/coin-knight.svg");
     background-repeat: no-repeat;
     background-size: contain;
   }
@@ -1207,7 +1208,7 @@
   height: 426px;
   margin-left: 59px;
   flex-shrink: 0;
-  background-image: url("img/brand-icon/guarding-knight.svg");
+  background-image: url("./img/brand-icon/guarding-knight.svg");
   background-repeat: no-repeat;
 }
 
