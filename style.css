@@ -154,7 +154,7 @@
 @media (max-width: 1023px) {
   .title {
     font-size: 28px;
-    line-height: 110%;
+    line-height: 31px;
   }
 }
 
@@ -493,12 +493,48 @@
 /* main */
 
 .main__intro {
-  margin-bottom: 157px;
+  margin-bottom: 134px;
+}
+
+.main__products {
+  margin-bottom: 136px;
+}
+
+.main__starting {
+  margin-bottom: 98px;
+}
+
+.main__options {
+  margin-bottom: 128px;
+}
+
+.main__features {
+  margin-bottom: 140px;
 }
 
 @media(max-width: 1023px) {
   .main__intro {
     margin-bottom: 100px;
+  }
+
+  .main__products {
+    margin-bottom: 76px;
+  }
+
+  .main__starting {
+    margin-bottom: 59px;
+  }
+
+  .main__options {
+    margin-bottom: 13px;
+  }
+
+  .main__products {
+    margin-bottom: 76px;
+  }
+
+  .main__features {
+    margin-bottom: 80px;
   }
 }
 
@@ -666,12 +702,7 @@
   }
 }
 
-
 /* products */
-
-.products {
-  padding-bottom: 150px;
-}
 
 .products__title {
   margin-bottom: 24px;
@@ -680,30 +711,47 @@
 .products__list {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 .products__item {
   position: relative;
-  box-sizing: border-box;
-  flex-basis: calc(50% - 28px);
+  flex-basis: calc(50% - 26px);
   padding: 60px 163px 50px 65px;
+  background-repeat: no-repeat;
+  box-sizing: border-box;
 }
 
 .products__item::after {
-  position: absolute;
   content: "";
-  box-sizing: border-box;
+  position: absolute;
+  right: 30px;
+  bottom: 2px;
   width: 153px;
   height: 153px;
   border: 1px solid #9deee1;
   border-radius: 32px;
-  right: 30px;
-  bottom: 2px;
+  box-sizing: border-box;
   background-color: #ecfffc;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.products__item--ethereum {
+  background-image: url("/img/decor/bg-products--ethereum.svg");
+}
+
+.products__item--ethereum::after {
+  background-image: url("/img/icon/ethereum.svg");
 }
 
 .products__item--bitcoin {
+  background-image: url("/img/decor/bg-products--btc.svg");
   padding-right: 205px;
+}
+
+.products__item--bitcoin::after {
+  background-image: url("/img/icon/bitcoin.svg");
 }
 
 .products__subtitle {
@@ -723,19 +771,488 @@
 }
 
 .products__desc-item::before {
-  position: absolute;
   content: "";
+  position: absolute;
+  top: 7px;
+  left: 0;
   width: 9px;
   height: 9px;
   border-radius: 14px;
-  top: 7px;
-  left: 0;
   background-image: linear-gradient(183.63deg, #90f3c4 38.29%, #59c090 97.43%)
 }
 
 .products__button {
   padding: 12px 68px;
 }
+
+@media (max-width: 1023px) {
+  .products__list {
+    row-gap: 25px;
+  }
+
+  .products__item {
+    flex-basis: 100%;
+    padding: 16px 88px 16px 16px;
+    box-sizing: border-box;
+    background-repeat: no-repeat;
+    background-image: url("/img/decor/bg-products-mob.svg");
+    background-size: 350px 232px;
+  }
+
+  .products__item::after {
+    right: 15px;
+    bottom: 2px;
+    width: 80px;
+    height: 80px;
+    border: 1px solid #9deee1;
+    border-radius: 16px;
+  }
+
+  .products__item--ethereum::after,
+  .products__item--bitcoin::after {
+    background-size: 33%;
+  }
+
+  .products__item--bitcoin {
+    padding-right: 114px;
+  }
+
+  .products__subtitle {
+    margin-bottom: 12px;
+  }
+
+  .products__desc-list {
+    row-gap: 12px;
+    margin-bottom: 24px;
+  }
+
+  .products__desc-item {
+    padding-left: 16px;
+  }
+
+  .products__desc-item::before {
+    top: 2px;
+    left: 0;
+    width: 5px;
+    height: 5px;
+    border-radius: 14px;
+  }
+
+  .products__button {
+    padding: 12px 32px;
+  }
+}
+
+/* starting */
+
+.starting__wrapper {
+  padding-top: 90px;
+  padding-bottom: 105px;
+  box-sizing: border-box;
+  border-width: 1px 0px;
+  border-style: solid;
+  border-color: #9deee1;
+  box-shadow: inset -4px -4px 4px rgba(255, 255, 255, 0.95);
+  background-image: url("/img/decor/bg-started-desk.svg");
+}
+
+.starting__title {
+  line-height: 60px;
+  margin-bottom: 93px;
+}
+
+.starting__list {
+  display: flex;
+  column-gap: 45px;
+}
+
+.starting__item {
+  position: relative;
+  flex-basis: calc(33% - 25px);
+  padding: 73px 105px 92px 65px;
+  box-sizing: border-box;
+  background-image: url("/img/decor/bg-content-started-desk.svg");
+  background-repeat: no-repeat;
+}
+
+.starting__item::before {
+  position: absolute;
+  bottom: 8px;
+  right: 41px;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 60px;
+  color: #58445e;
+}
+
+.starting__item--sign-up {
+  padding: 65px 86px 50px 65px;
+}
+
+.starting__item--sign-up::before {
+  content: "01";
+}
+
+.starting__item--sign-up::after {
+  content: "";
+  position: absolute;
+  top: -59px;
+  right: 41px;
+  width: 115px;
+  height: 130px;
+  background-image: url("/img/brand-icon/crying-knight.svg");
+  background-repeat: no-repeat;
+}
+
+.starting__item--fund::before {
+  content: "02";
+}
+
+.starting__item--fund::after {
+  content: "";
+  position: absolute;
+  top: -61px;
+  right: 37px;
+  width: 95px;
+  height: 122px;
+  background-image: url("/img/brand-icon/fire-knight.svg");
+  background-repeat: no-repeat;
+}
+
+.starting__item--start::before {
+  content: "03";
+}
+
+.starting__item--start::after {
+  content: "";
+  position: absolute;
+  top: -38px;
+  right: 25px;
+  width: 121px;
+  height: 99px;
+  background-image: url("/img/brand-icon/coin-knight.svg");
+  background-repeat: no-repeat;
+}
+
+.starting__subtitle {
+  margin-bottom: 8px;
+}
+
+.starting__link {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 32px;
+  color: #78ddae;
+  margin-top: 18px;
+}
+
+@media (max-width: 1023px) {
+  .starting__wrapper {
+    padding-top: 40px;
+    padding-bottom: 56px;
+    background-color: #ecfffc;
+    background-image: none;
+  }
+
+  .starting__title {
+    margin-bottom: 11px;
+  }
+
+  .starting__list {
+    flex-wrap: wrap;
+    row-gap: 14px;
+  }
+
+  .starting__item {
+    padding: 20px 16px 25px 110px;
+    flex-basis: 100%;
+    background-image: url("/img/decor/bg-content-started-mob.svg");
+  }
+
+  .starting__item--sign-up {
+    padding-bottom: 20px;
+    padding-right: 33px;
+    background-image: url("/img/decor/bg-content-started--signup.svg");
+  }
+
+  .starting__break {
+    display: none;
+  }
+
+  .starting__item--sign-up::after {
+    content: "";
+    position: absolute;
+    top: 25px;
+    left: -4px;
+    width: 84px;
+    height: 95px;
+    background-image: url("/img/brand-icon/crying-knight.svg");
+    background-size: contain;
+  }
+
+  .starting__item--fund::after {
+    content: "";
+    position: absolute;
+    top: 3px;
+    left: 11px;
+    width: 73px;
+    height: 93px;
+    background-image: url("/img/brand-icon/fire-knight.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+
+  .starting__item::before {
+    font-size: 16px;
+    line-height: 16px;
+    bottom: 4px;
+    right: 17px;
+  }
+
+  .starting__item--start::after {
+    content: "";
+    position: absolute;
+    top: 21px;
+    left: -4px;
+    width: 89px;
+    height: 72px;
+    background-image: url("/img/brand-icon/coin-knight.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+
+  .starting__desc {
+    font-size: 14px;
+    line-height: 17px;
+  }
+
+  .starting__link {
+    font-size: 14px;
+    line-height: 15px;
+    margin-top: 10px;
+  }
+}
+
+
+/* options */
+
+.options__wrapper {
+  padding-top: 44px;
+  padding-bottom: 44px;
+  background-image: url("img/decor/bg-options.svg");
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: 382px 391px;
+}
+
+.options__title {
+  margin-bottom: 3px;
+}
+
+.options__specificity {
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 32px;
+  text-align: center;
+  width: 60%;
+  margin: 0 auto 66px;
+}
+
+.opsions__spec-br {
+  display: none;
+}
+
+@media (max-width: 1280px) {
+  .options__specificity {
+    width: 73%;
+  }
+}
+
+.options__img {
+  margin: 0 auto 38px;
+}
+
+.options__list {
+  display: flex;
+  justify-content: center;
+  column-gap: 124px;
+}
+
+.options__item--problem {
+  width: 332px;
+  margin-left: 80px;
+}
+
+.options__item--solution {
+  width: 362px;
+}
+
+.options__subtitle {
+  margin-bottom: 6px;
+}
+
+@media (max-width: 1439px) {
+  .options__br {
+    display: none;
+  }
+}
+
+@media (max-width: 1023px) {
+
+  .options__wrapper {
+    padding-top: 66px;
+    padding-bottom: 66px;
+    background-size: 235px 241px;
+  }
+
+  .options__title {
+    margin-bottom: 16px;
+  }
+
+  .options__specificity {
+    font-size: 15px;
+    line-height: 19px;
+    text-align: center;
+    width: 89%;
+    margin: 0 auto 22px;
+  }
+
+  .opsions__spec-br {
+    display: block;
+  }
+
+  .options__img {
+    width: 350px;
+    height: 162px;
+    margin: 0 auto 32px;
+  }
+
+  .options__list {
+    display: flex;
+    flex-direction: column;
+    row-gap: 21px;
+    padding: 0 16px;
+  }
+
+  .options__item {
+    width: auto;
+    margin-left: 0;
+  }
+
+  .options__subtitle {
+    margin-bottom: 8px;
+  }
+
+  .options__desc {
+    font-size: 14px;
+    line-height: 120%;
+  }
+}
+
+/* features */
+
+.features__wrapper {
+  background: #ecfffc;
+  border-top: 1px solid #9deee1;
+  border-bottom: 1px solid #9deee1;
+  box-shadow: inset -4px -4px 4px rgba(255, 255, 255, 0.95);
+  padding-top: 55px;
+  padding-bottom: 85px;
+}
+
+.features__title {
+  margin-bottom: 25px;
+}
+
+.features__wrapper-content {
+  display: flex;
+  justify-content: center;
+  column-gap: 61px;
+}
+
+.features__icon {
+  width: 458px;
+  height: 426px;
+  margin-left: 59px;
+  flex-shrink: 0;
+  background-image: url("img/brand-icon/guarding-knight.svg");
+  background-repeat: no-repeat;
+}
+
+.features__list {
+  display: flex;
+  flex-direction: column;
+  row-gap: 22px;
+  margin-top: 38px;
+  width: 515px;
+}
+
+.features__subtitle {
+  margin-bottom: 5px;
+}
+
+@media (max-width: 1280px) {
+  .features__wrapper-content {
+    column-gap: 45px;
+  }
+
+  .features__icon {
+    margin-left: 0;
+  }
+
+  .features__list {
+    padding-right: 16px;
+  }
+
+  .features__br {
+    display: none;
+  }
+}
+
+@media (max-width: 1023px) {
+  .features__wrapper {
+    padding-top: 40px;
+    padding-bottom: 47px;
+  }
+
+  .features__title {
+    margin-bottom: 16px;
+  }
+
+  .features__icon {
+    width: 312px;
+    height: 289px;
+    background-size: 312px 289px;
+    margin-left: 11px;
+  }
+
+  .features__wrapper-content {
+    flex-direction: column;
+    row-gap: 26px;
+  }
+
+  .features__list {
+    width: 286px;
+    margin: 0 auto;
+    padding: 0;
+    row-gap: 20px;
+  }
+
+  .features__subtitle {
+    font-size: 18px;
+    line-height: 19px;
+    margin-bottom: 8px;
+  }
+
+  .features__desc {
+    font-size: 14px;
+    line-height: 17px;
+  }
+}
+
+
 
 /* footer */
 
