@@ -508,6 +508,10 @@
   margin-bottom: 128px;
 }
 
+.main__features {
+  margin-bottom: 140px;
+}
+
 @media(max-width: 1023px) {
   .main__intro {
     margin-bottom: 100px;
@@ -527,6 +531,10 @@
 
   .main__products {
     margin-bottom: 76px;
+  }
+
+  .main__features {
+    margin-bottom: 80px;
   }
 }
 
