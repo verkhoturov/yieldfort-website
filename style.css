@@ -154,7 +154,7 @@
 @media (max-width: 1023px) {
   .title {
     font-size: 28px;
-    line-height: 110%;
+    line-height: 31px;
   }
 }
 
@@ -493,7 +493,7 @@
 /* main */
 
 .main__intro {
-  margin-bottom: 157px;
+  margin-bottom: 134px;
 }
 
 @media(max-width: 1023px) {
@@ -668,11 +668,6 @@
 
 
 /* products */
-
-.products {
-  padding-bottom: 150px;
-}
-
 .products__title {
   margin-bottom: 24px;
 }
@@ -690,15 +685,15 @@
 }
 
 .products__item::after {
-  position: absolute;
   content: "";
-  box-sizing: border-box;
-  width: 153px;
-  height: 153px;
-  border: 1px solid #9deee1;
-  border-radius: 32px;
+  position: absolute;
   right: 30px;
   bottom: 2px;
+  width: 153px;
+  height: 153px;
+  box-sizing: border-box;
+  border: 1px solid #9deee1;
+  border-radius: 32px;
   background-color: #ecfffc;
 }
 
@@ -735,6 +730,121 @@
 
 .products__button {
   padding: 12px 68px;
+}
+
+/* options */
+
+.options__wrapper {
+  padding-top: 44px;
+  padding-bottom: 44px;
+  background-image: url("img/decor/bg-options.svg");
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: 382px 391px;
+}
+
+.options__title {
+  margin-bottom: 3px;
+}
+
+.options__specificity {
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 32px;
+  text-align: center;
+  width: 60%;
+  margin: 0 auto 66px;
+}
+
+.opsions__spec-br {
+  display: none;
+}
+
+@media (max-width: 1280px) {
+  .options__specificity {
+    width: 73%;
+  }
+}
+
+.options__img {
+  margin: 0 auto 38px;
+}
+
+.options__list {
+  display: flex;
+  justify-content: center;
+  column-gap: 124px;
+}
+
+.options__item--problem {
+  width: 332px;
+  margin-left: 80px;
+}
+
+.options__item--solution {
+  width: 362px;
+}
+
+.options__subtitle {
+  margin-bottom: 6px;
+}
+
+@media (max-width: 1439px) {
+  .options__br {
+    display: none;
+  }
+}
+
+@media (max-width: 1023px) {
+
+  .options__wrapper {
+    padding-top: 66px;
+    padding-bottom: 66px;
+    background-size: 235px 241px;
+  }
+
+  .options__title {
+    margin-bottom: 16px;
+  }
+
+  .options__specificity {
+    font-size: 15px;
+    line-height: 19px;
+    text-align: center;
+    width: 89%;
+    margin: 0 auto 22px;
+  }
+
+  .opsions__spec-br {
+    display: block;
+  }
+
+  .options__img {
+    width: 350px;
+    height: 162px;
+    margin: 0 auto 32px;
+  }
+
+  .options__list {
+    display: flex;
+    flex-direction: column;
+    row-gap: 21px;
+    padding: 0 16px;
+  }
+
+  .options__item {
+    width: auto;
+    margin-left: 0;
+  }
+
+  .options__subtitle {
+    margin-bottom: 8px;
+  }
+
+  .options__desc {
+    font-size: 14px;
+    line-height: 120%;
+  }
 }
 
 /* footer */
