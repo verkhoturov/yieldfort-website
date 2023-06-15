@@ -496,9 +496,25 @@
   margin-bottom: 134px;
 }
 
+.main__options {
+  margin-bottom: 128px;
+}
+
+.main__products {
+  margin-bottom: 138px;
+}
+
 @media(max-width: 1023px) {
   .main__intro {
     margin-bottom: 100px;
+  }
+
+  .main__options {
+    margin-bottom: 80px;
+  }
+
+  .main__products {
+    margin-bottom: 76px;
   }
 }
 
