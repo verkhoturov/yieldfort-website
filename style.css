@@ -496,12 +496,16 @@
   margin-bottom: 134px;
 }
 
-.main__options {
-  margin-bottom: 128px;
+.main__products {
+  margin-bottom: 136px;
 }
 
-.main__products {
-  margin-bottom: 138px;
+.main__starting {
+  margin-bottom: 98px;
+}
+
+.main__options {
+  margin-bottom: 128px;
 }
 
 @media(max-width: 1023px) {
@@ -509,8 +513,16 @@
     margin-bottom: 100px;
   }
 
+  .main__products {
+    margin-bottom: 76px;
+  }
+
+  .main__starting {
+    margin-bottom: 59px;
+  }
+
   .main__options {
-    margin-bottom: 80px;
+    margin-bottom: 13px;
   }
 
   .main__products {
@@ -775,7 +787,8 @@
     padding: 16px 88px 16px 16px;
     box-sizing: border-box;
     background-repeat: no-repeat;
-    background-image: url("/img/decor/bg-products-mobile.svg")
+    background-image: url("/img/decor/bg-products-mob.svg");
+    background-size: 350px 232px;
   }
 
   .products__item::after {
@@ -821,6 +834,199 @@
     padding: 12px 32px;
   }
 }
+
+/* starting */
+
+.starting__wrapper {
+  padding-top: 90px;
+  padding-bottom: 105px;
+  box-sizing: border-box;
+  border-width: 1px 0px;
+  border-style: solid;
+  border-color: #9deee1;
+  box-shadow: inset -4px -4px 4px rgba(255, 255, 255, 0.95);
+  background-image: url("/img/decor/bg-started-desk.svg");
+}
+
+.starting__title {
+  line-height: 60px;
+  margin-bottom: 93px;
+}
+
+.starting__list {
+  display: flex;
+  column-gap: 45px;
+}
+
+.starting__item {
+  position: relative;
+  flex-basis: calc(33% - 25px);
+  padding: 73px 105px 92px 65px;
+  box-sizing: border-box;
+  background-image: url("/img/decor/bg-content-started-desk.svg");
+  background-repeat: no-repeat;
+}
+
+.starting__item::before {
+  position: absolute;
+  bottom: 8px;
+  right: 41px;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 60px;
+  color: #58445e;
+}
+
+.starting__item--sign-up {
+  padding: 65px 86px 50px 65px;
+}
+
+.starting__item--sign-up::before {
+  content: "01";
+}
+
+.starting__item--sign-up::after {
+  content: "";
+  position: absolute;
+  top: -59px;
+  right: 41px;
+  width: 115px;
+  height: 130px;
+  background-image: url("/img/brand-icon/crying-knight.svg");
+  background-repeat: no-repeat;
+}
+
+.starting__item--fund::before {
+  content: "02";
+}
+
+.starting__item--fund::after {
+  content: "";
+  position: absolute;
+  top: -61px;
+  right: 37px;
+  width: 95px;
+  height: 122px;
+  background-image: url("/img/brand-icon/fire-knight.svg");
+  background-repeat: no-repeat;
+}
+
+.starting__item--start::before {
+  content: "03";
+}
+
+.starting__item--start::after {
+  content: "";
+  position: absolute;
+  top: -38px;
+  right: 25px;
+  width: 121px;
+  height: 99px;
+  background-image: url("/img/brand-icon/coin-knight.svg");
+  background-repeat: no-repeat;
+}
+
+.starting__subtitle {
+  margin-bottom: 8px;
+}
+
+.starting__link {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 32px;
+  color: #78ddae;
+  margin-top: 18px;
+}
+
+@media (max-width: 1023px) {
+  .starting__wrapper {
+    padding-top: 40px;
+    padding-bottom: 56px;
+    background-color: #ecfffc;
+    background-image: none;
+  }
+
+  .starting__title {
+    margin-bottom: 11px;
+  }
+
+  .starting__list {
+    flex-wrap: wrap;
+    row-gap: 14px;
+  }
+
+  .starting__item {
+    padding: 20px 16px 25px 110px;
+    flex-basis: 100%;
+    background-image: url("/img/decor/bg-content-started-mob.svg");
+  }
+
+  .starting__item--sign-up {
+    padding-bottom: 20px;
+    padding-right: 33px;
+    background-image: url("/img/decor/bg-content-started--signup.svg");
+  }
+
+  .starting__break {
+    display: none;
+  }
+
+  .starting__item--sign-up::after {
+    content: "";
+    position: absolute;
+    top: 25px;
+    left: -4px;
+    width: 84px;
+    height: 95px;
+    background-image: url("/img/brand-icon/crying-knight.svg");
+    background-size: contain;
+  }
+
+  .starting__item--fund::after {
+    content: "";
+    position: absolute;
+    top: 3px;
+    left: 11px;
+    width: 73px;
+    height: 93px;
+    background-image: url("/img/brand-icon/fire-knight.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+
+  .starting__item::before {
+    font-size: 16px;
+    line-height: 16px;
+    bottom: 4px;
+    right: 17px;
+  }
+
+  .starting__item--start::after {
+    content: "";
+    position: absolute;
+    top: 21px;
+    left: -4px;
+    width: 89px;
+    height: 72px;
+    background-image: url("/img/brand-icon/coin-knight.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+
+  .starting__desc {
+    font-size: 14px;
+    line-height: 17px;
+  }
+
+  .starting__link {
+    font-size: 14px;
+    line-height: 15px;
+    margin-top: 10px;
+  }
+}
+
 
 /* options */
 
@@ -936,6 +1142,109 @@
     line-height: 120%;
   }
 }
+
+/* features */
+
+.features__wrapper {
+  background: #ecfffc;
+  border-top: 1px solid #9deee1;
+  border-bottom: 1px solid #9deee1;
+  box-shadow: inset -4px -4px 4px rgba(255, 255, 255, 0.95);
+  padding-top: 55px;
+  padding-bottom: 85px;
+}
+
+.features__title {
+  margin-bottom: 25px;
+}
+
+.features__wrapper-content {
+  display: flex;
+  justify-content: center;
+  column-gap: 61px;
+}
+
+.features__icon {
+  width: 458px;
+  height: 426px;
+  margin-left: 59px;
+  flex-shrink: 0;
+  background-image: url("img/brand-icon/guarding-knight.svg");
+  background-repeat: no-repeat;
+}
+
+.features__list {
+  display: flex;
+  flex-direction: column;
+  row-gap: 22px;
+  margin-top: 38px;
+  width: 515px;
+}
+
+.features__subtitle {
+  margin-bottom: 5px;
+}
+
+@media (max-width: 1280px) {
+  .features__wrapper-content {
+    column-gap: 45px;
+  }
+
+  .features__icon {
+    margin-left: 0;
+  }
+
+  .features__list {
+    padding-right: 16px;
+  }
+
+  .features__br {
+    display: none;
+  }
+}
+
+@media (max-width: 1023px) {
+  .features__wrapper {
+    padding-top: 40px;
+    padding-bottom: 47px;
+  }
+
+  .features__title {
+    margin-bottom: 16px;
+  }
+
+  .features__icon {
+    width: 312px;
+    height: 289px;
+    background-size: 312px 289px;
+    margin-left: 11px;
+  }
+
+  .features__wrapper-content {
+    flex-direction: column;
+    row-gap: 26px;
+  }
+
+  .features__list {
+    width: 286px;
+    margin: 0 auto;
+    padding: 0;
+    row-gap: 20px;
+  }
+
+  .features__subtitle {
+    font-size: 18px;
+    line-height: 19px;
+    margin-bottom: 8px;
+  }
+
+  .features__desc {
+    font-size: 14px;
+    line-height: 17px;
+  }
+}
+
+
 
 /* footer */
 
