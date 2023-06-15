@@ -785,10 +785,25 @@
   padding: 12px 68px;
 }
 
-@media (max-width: 1023px) {
+@media (max-width: 1439px) {
   .products__list {
+    flex-direction: column;
+    align-items: center;
     row-gap: 25px;
   }
+
+  .products__item {
+    width: 642px;
+    flex-basis: auto;
+  }
+}
+
+@media (max-width: 1023px) {
+  .products__list {
+    flex-direction: row;
+    row-gap: 25px;
+  }
+
 
   .products__item {
     flex-basis: 100%;
@@ -845,14 +860,18 @@
 
 /* starting */
 
-.starting__wrapper {
+.starting {
   padding-top: 90px;
   padding-bottom: 105px;
   box-sizing: border-box;
-  border-width: 1px 0px;
-  border-style: solid;
-  border-color: #9deee1;
+  background-color: #ecfffc;
+  border-top: 1px solid #9deee1;
+  border-bottom: 1px solid #9deee1;
   box-shadow: inset -4px -4px 4px rgba(255, 255, 255, 0.95);
+  background-image: url("img/decor/bg-starting.svg"),
+  url("img/decor/bg-starting.svg");
+  background-position: bottom -34px left -340px, top -262px right -245px;;
+  background-repeat: no-repeat;
   background-image: url("./img/decor/bg-started-desk.svg");
 }
 
@@ -948,11 +967,23 @@
   margin-top: 18px;
 }
 
+@media (max-width: 1439px) {
+  .starting__list {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 70px;
+  }
+
+  .starting__item {
+    width: 417px;
+    flex-basis: auto;
+  }
+}
+
 @media (max-width: 1023px) {
-  .starting__wrapper {
+  .starting {
     padding-top: 40px;
     padding-bottom: 56px;
-    background-color: #ecfffc;
     background-image: none;
   }
 
@@ -1153,7 +1184,7 @@
 
 /* features */
 
-.features__wrapper {
+.features {
   background: #ecfffc;
   border-top: 1px solid #9deee1;
   border-bottom: 1px solid #9deee1;
@@ -1212,7 +1243,7 @@
 }
 
 @media (max-width: 1023px) {
-  .features__wrapper {
+  .features {
     padding-top: 40px;
     padding-bottom: 47px;
   }
@@ -1256,13 +1287,16 @@
 
 /* footer */
 
+.footer {
+  padding-top: 56px;
+  padding-bottom: 36px;
+  background-color: #6b6f7b;
+}
+
 .footer__wrapper {
   display: grid;
   grid-template-columns: 82px 146px 100px 1fr;
   grid-template-rows: 89px;
-  padding-top: 56px;
-  padding-bottom: 36px;
-  background-color: #6b6f7b;
 }
 
 .footer__logo {
@@ -1302,8 +1336,11 @@
 
 @media (max-width: 1023px) {
 
-  .footer__wrapper {
+  .footer {
     padding-top: 36px;
+  }
+
+  .footer__wrapper {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto;
   }
