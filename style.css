@@ -1,11 +1,9 @@
-@import "normalize.css";
-
 /* fonts */
 
 @font-face {
   font-family: "General Sans";
-  src: url("fonts/GeneralSans-Medium.woff2") format("woff2"),
-    url("fonts/GeneralSans-Medium.woff") format("woff");
+  src: url("./fonts/GeneralSans-Medium.woff2") format("woff2"),
+    url("./fonts/GeneralSans-Medium.woff") format("woff");
   font-style: normal;
   font-weight: 500;
   font-display: swap;
@@ -13,8 +11,8 @@
 
 @font-face {
   font-family: "General Sans";
-  src: url("fonts/GeneralSans-Semibold.woff2") format("woff2"),
-    url("fonts/GeneralSans-Semibold.woff") format("woff");
+  src: url("./fonts/GeneralSans-Semibold.woff2") format("woff2"),
+    url("./fonts/GeneralSans-Semibold.woff") format("woff");
   font-style: normal;
   font-weight: 600;
   font-display: swap;
@@ -22,8 +20,8 @@
 
 @font-face {
   font-family: "General Sans";
-  src: url("fonts/GeneralSans-Bold.woff2") format("woff2"),
-    url("fonts/GeneralSans-Bold.woff") format("woff");
+  src: url("./fonts/GeneralSans-Bold.woff2") format("woff2"),
+    url("./fonts/GeneralSans-Bold.woff") format("woff");
   font-style: normal;
   font-weight: 700;
   font-display: swap;
@@ -560,7 +558,7 @@
   right: 0;
   width: 218px;
   height: 191px;
-  background-image: url("img/brand-icon/crypto-knight.svg");
+  background-image: url("./img/brand-icon/crypto-knight.svg");
 }
 
 .intro__title {
@@ -650,7 +648,7 @@
     top: -119px;
     width: 125px;
     height: 110px;
-    background-image: url("img/brand-icon/crypto-knight.svg");
+    background-image: url("./img/brand-icon/crypto-knight.svg");
     background-size: 125px 110px;
   }
 
@@ -1179,7 +1177,7 @@
   height: 426px;
   margin-left: 59px;
   flex-shrink: 0;
-  background-image: url("img/brand-icon/guarding-knight.svg");
+  background-image: url("./img/brand-icon/guarding-knight.svg");
   background-repeat: no-repeat;
 }
 
