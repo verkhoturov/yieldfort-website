@@ -666,8 +666,8 @@
   }
 }
 
-
 /* products */
+
 .products__title {
   margin-bottom: 24px;
 }
@@ -675,13 +675,15 @@
 .products__list {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 .products__item {
   position: relative;
-  box-sizing: border-box;
-  flex-basis: calc(50% - 28px);
+  flex-basis: calc(50% - 26px);
   padding: 60px 163px 50px 65px;
+  background-repeat: no-repeat;
+  box-sizing: border-box;
 }
 
 .products__item::after {
@@ -691,14 +693,29 @@
   bottom: 2px;
   width: 153px;
   height: 153px;
-  box-sizing: border-box;
   border: 1px solid #9deee1;
   border-radius: 32px;
+  box-sizing: border-box;
   background-color: #ecfffc;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.products__item--ethereum {
+  background-image: url("/img/decor/bg-products--ethereum.svg");
+}
+
+.products__item--ethereum::after {
+  background-image: url("/img/icon/ethereum.svg");
 }
 
 .products__item--bitcoin {
+  background-image: url("/img/decor/bg-products--btc.svg");
   padding-right: 205px;
+}
+
+.products__item--bitcoin::after {
+  background-image: url("/img/icon/bitcoin.svg");
 }
 
 .products__subtitle {
@@ -718,13 +735,13 @@
 }
 
 .products__desc-item::before {
-  position: absolute;
   content: "";
+  position: absolute;
+  top: 7px;
+  left: 0;
   width: 9px;
   height: 9px;
   border-radius: 14px;
-  top: 7px;
-  left: 0;
   background-image: linear-gradient(183.63deg, #90f3c4 38.29%, #59c090 97.43%)
 }
 
@@ -738,19 +755,25 @@
   }
 
   .products__item {
-    box-sizing: border-box;
     flex-basis: 100%;
     padding: 16px 88px 16px 16px;
+    box-sizing: border-box;
     background-repeat: no-repeat;
+    background-image: url("/img/decor/bg-products-mobile.svg")
   }
 
   .products__item::after {
+    right: 15px;
+    bottom: 2px;
     width: 80px;
     height: 80px;
     border: 1px solid #9deee1;
     border-radius: 16px;
-    right: 15px;
-    bottom: 2px;
+  }
+
+  .products__item--ethereum::after,
+  .products__item--bitcoin::after {
+    background-size: 33%;
   }
 
   .products__item--bitcoin {
@@ -771,11 +794,11 @@
   }
 
   .products__desc-item::before {
+    top: 2px;
+    left: 0;
     width: 5px;
     height: 5px;
     border-radius: 14px;
-    top: 2px;
-    left: 0;
   }
 
   .products__button {
