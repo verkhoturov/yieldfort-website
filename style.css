@@ -1942,10 +1942,6 @@
   transition: height 0.5s;
 }
 
-.faq__item--active .faq__content {
-  height: max-content;
-}
-
 @media (max-width: 1279px) {
   .faq__list {
     padding: 0 50px;
